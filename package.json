@@ -1,0 +1,32 @@
+{
+  "name": "space-kadet-shop",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "React-Redux ecommerce site running on a MERN stack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missstaff/Space-Kadet-Shop.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "MongoDB",
+    "Node.js"
+  ],
+  "author": "Shawna Staff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missstaff/Space-Kadet-Shop/issues"
+  },
+  "homepage": "https://github.com/missstaff/Space-Kadet-Shop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
