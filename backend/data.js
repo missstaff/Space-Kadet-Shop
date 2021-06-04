@@ -1,7 +1,21 @@
+import bcrypt from "bcryptjs";
 const data = {
+  users: [
+    {
+      name: "Miss",
+      email: "shawnastaff@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "John",
+      email: "user@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
       name: "Space Kadet Tee Shirt",
       category: "Men's Shirts",
       image: "../images/mensblacktee.jpg",
@@ -13,7 +27,6 @@ const data = {
       description: "Black Space Kadet Tee Shirt",
     },
     {
-      _id: "2",
       name: "Magic Baby Tee",
       category: "Women's Tops",
       image: "../images/magicbabytee.jpg",
@@ -25,7 +38,6 @@ const data = {
       description: "Space Kadet Magic Women's Baby Tee",
     },
     {
-      _id: "3",
       name: "SK Tank Top",
       category: "Women's Tops",
       image: "../images/sktank.jpg",
@@ -37,7 +49,6 @@ const data = {
       description: "Space Kadet SK Tank Top",
     },
     {
-      _id: "4",
       name: "Spacey Leggings",
       category: "Leggings",
       image: "../images/whitespacelyleggings.jpg",
@@ -49,7 +60,6 @@ const data = {
       description: "Space Kadet Spacey Leggings",
     },
     {
-      _id: "5",
       name: "SK Leggings",
       category: "Leggings",
       image: "../images/whitespacelyleggingssideview.jpg",
@@ -59,30 +69,6 @@ const data = {
       rating: 4.5,
       numReviews: 10,
       description: "Space Kadet SK Leggings",
-    },
-    {
-      _id: "6",
-      name: "Space Kadet Tee Shirt",
-      category: "Men's Shirts",
-      image: "../images/mensblacktee.jpg",
-      price: 25,
-      brand: "Space Kadet",
-      countInStock: 33,
-      rating: 4.5,
-      numReviews: 10,
-      description: "Black Space Kadet Tee Shirt",
-    },
-    {
-      _id: "7",
-      name: "Magic Baby Tee",
-      category: "Women's Tops",
-      image: "../images/magicbabytee.jpg",
-      price: 25,
-      brand: "Space Kadet",
-      countInStock: 3,
-      rating: 4.0,
-      numReviews: 10,
-      description: "Space Kadet Magic Women's Baby Tee",
     },
   ],
 };
