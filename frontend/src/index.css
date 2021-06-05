@@ -13,7 +13,6 @@ body {
 #root {
   height: 100%;
 }
-
 /* Layout */
 .grid-container {
   display: grid;
@@ -41,11 +40,11 @@ footer {
 /* Common */
 h1 {
   font-size: 1.8rem;
-  padding: 0.1rem 0;
+  padding: 1rem 0;
 }
 h2 {
   font-size: 1.6rem;
-  padding: 0.1rem 0;
+  padding: 1rem 0;
 }
 a {
   text-decoration: none;
@@ -89,7 +88,6 @@ button.primary {
 button.block {
   width: 100%;
 }
-
 /* Header */
 header a {
   color: #ffffff;
@@ -129,7 +127,6 @@ a.brand {
 .min-30 {
   min-width: 30rem;
 }
-
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -145,7 +142,6 @@ img.medium {
 img.large {
   width: 100%;
 }
-
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
@@ -162,7 +158,6 @@ img.large {
 .price {
   font-size: 2rem;
 }
-
 /* Rating */
 .rating span {
   color: #f0c040;
@@ -171,8 +166,10 @@ img.large {
 .rating span:last-child {
   color: #404040;
 }
-
 /* Alert */
+.loading {
+  display: block !important;
+}
 .success {
   color: #20a020;
 }
@@ -191,4 +188,38 @@ img.large {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0;
+}
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+}
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-contents {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-contents {
+  display: block;
 }
