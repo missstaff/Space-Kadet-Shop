@@ -5,7 +5,10 @@ import {
   productDetailsReducer,
   productListReducer,
 } from "./reducers/productReducers.js";
-import { userSigninReducer } from "./reducers/userReducer.js";
+import {
+  userRegisterReducer,
+  userSigninReducer,
+} from "./reducers/userReducer.js";
 
 const initialState = {
   userSignin: {
@@ -25,6 +28,7 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
 });
 
 //connects to redux
