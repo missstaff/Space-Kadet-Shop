@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers.js";
+import { orderCreateReducer } from "./reducers/orderReducers.js";
 import {
   productDetailsReducer,
   productListReducer,
@@ -33,6 +34,7 @@ const reducer = combineReducers({
   cart: cartReducer,
   userSignin: userSigninReducer,
   userRegister: userRegisterReducer,
+  orderCreate: orderCreateReducer,
 });
 
 //connects to redux
