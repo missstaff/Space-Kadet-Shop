@@ -4,6 +4,7 @@ import { cartReducer } from "./reducers/cartReducers.js";
 import {
   orderCreateReducer,
   orderDetailsReducer,
+  orderPayReducer,
 } from "./reducers/orderReducers.js";
 import {
   productDetailsReducer,
@@ -39,6 +40,7 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
 });
 
 //connects to redux
