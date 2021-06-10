@@ -77,10 +77,17 @@ export default function OrderScreen(props) {
                 {order.isDelivered ? (
                   <MessageBox variant="success">
                     Delivered at {order.deliveredAt}
-                    Tracking Number {order.shippingConfirmationNumber}
                   </MessageBox>
                 ) : (
                   <MessageBox variant="danger">Not Delivered</MessageBox>
+                )}
+                {/*would like to display shipping confirmation number*/}
+                {order.shippingConfirmationNumber ? (
+                  <MessageBox variant="success">
+                    Tracking Number: {order.shippingConfirmationNumber}
+                  </MessageBox>
+                ) : (
+                  <MessageBox variant="danger">Not Shipped</MessageBox>
                 )}
               </div>
             </li>
