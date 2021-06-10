@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { signin } from "../actions/userActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import { signin } from "../actions/userActions.js";
+import LoadingBox from "../components/LoadingBox.js";
+import MessageBox from "../components/MessageBox.js";
 
 export default function SigninScreen(props) {
   const [email, setEmail] = useState("");

@@ -1,3 +1,4 @@
+import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { PayPalButton } from "react-paypal-button-v2";
@@ -5,7 +6,6 @@ import { Link } from "react-router-dom";
 import LoadingBox from "../components/LoadingBox.js";
 import MessageBox from "../components/MessageBox.js";
 import { detailsOrder, payOrder } from "../actions/orderActions.js";
-import Axios from "axios";
 import { ORDER_PAY_RESET } from "../constants/orderConstants.js";
 
 export default function OrderScreen(props) {

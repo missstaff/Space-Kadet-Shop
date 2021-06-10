@@ -17,7 +17,7 @@ export default function HomeScreen() {
     };
     /* calls fetchData */
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
