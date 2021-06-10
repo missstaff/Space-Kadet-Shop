@@ -1,18 +1,19 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import { signout } from "./actions/userActions";
 import "./index.css";
-import CartScreen from "./screens/CartScreen";
-import HomeScreen from "./screens/HomeScreen";
-import OrderHistoryScreen from "./screens/OrderHistoryScreen";
-import OrderScreen from "./screens/OrderScreen";
-import PaymentMethodScreen from "./screens/PaymentMethodScreen";
-import PlaceOrderScreen from "./screens/PlaceOrderScreen";
-import ProductScreen from "./screens/ProductScreen";
-import RegisterScreen from "./screens/RegisterScreen";
-import ShippingAddressScreen from "./screens/ShippingAddressScreen";
-import SigninScreen from "./screens/SigninScreen";
+import { signout } from "./actions/userActions.js";
+import CartScreen from "./screens/CartScreen.js";
+import HomeScreen from "./screens/HomeScreen.js";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
+import OrderScreen from "./screens/OrderScreen.js";
+import PaymentMethodScreen from "./screens/PaymentMethodScreen.js";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen.js";
+import ProductScreen from "./screens/ProductScreen.js";
+import ProfileScreen from "./screens/ProfileScreen.js";
+import RegisterScreen from "./screens/RegisterScreen.js";
+import ShippingAddressScreen from "./screens/ShippingAddressScreen.js";
+import SigninScreen from "./screens/SigninScreen.js";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -47,6 +48,9 @@ function App() {
                 </Link>
                 <ul className="dropdown-contents">
                   <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
+                  <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
                   <li>
@@ -70,6 +74,7 @@ function App() {
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
+          <Route path="/profile" component={ProfileScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>

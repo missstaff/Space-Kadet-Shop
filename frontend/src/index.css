@@ -13,6 +13,7 @@ body {
 #root {
   height: 100%;
 }
+
 /* Layout */
 .grid-container {
   display: grid;
@@ -37,6 +38,7 @@ footer {
   background-color: #203040;
   color: #ffffff;
 }
+
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -131,6 +133,7 @@ a.brand {
 .min-30 {
   min-width: 30rem;
 }
+
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -146,6 +149,7 @@ img.medium {
 img.large {
   width: 100%;
 }
+
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
@@ -162,6 +166,7 @@ img.large {
 .price {
   font-size: 2rem;
 }
+
 /* Rating */
 .rating span {
   color: #f0c040;
@@ -170,6 +175,7 @@ img.large {
 .rating span:last-child {
   color: #404040;
 }
+
 /* Alert */
 .loading {
   display: block !important;
