@@ -8,6 +8,7 @@ import {
   orderMineListReducer,
 } from "./reducers/orderReducers.js";
 import {
+  productCreateReducer,
   productDetailsReducer,
   productListReducer,
 } from "./reducers/productReducers.js";
@@ -47,6 +48,7 @@ const reducer = combineReducers({
   orderMineList: orderMineListReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
+  productCreate: productCreateReducer,
 });
 
 //connects to redux
