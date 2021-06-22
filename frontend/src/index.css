@@ -223,7 +223,7 @@ img.large {
   display: inline-block;
   position: relative;
 }
-.dropdown-contents {
+.dropdown-content {
   position: absolute;
   display: none;
   right: 0;
@@ -235,7 +235,7 @@ img.large {
   margin-top: 0.4rem;
   border-radius: 0.5rem;
 }
-.dropdown:hover .dropdown-contents {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 

@@ -1,25 +1,24 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import "./index.css";
+import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions.js";
+import AdminRoute from "./components/AdminRoute.js";
+import PrivateRoute from "./components/PrivateRoute.js";
 import CartScreen from "./screens/CartScreen.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
 import OrderScreen from "./screens/OrderScreen.js";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen.js";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen.js";
+import ProductListScreen from "./screens/ProductListScreen.js";
 import ProductScreen from "./screens/ProductScreen.js";
 import ProfileScreen from "./screens/ProfileScreen.js";
 import RegisterScreen from "./screens/RegisterScreen.js";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen.js";
 import SigninScreen from "./screens/SigninScreen.js";
-import PrivateRoute from "./components/PrivateRoute.js";
-
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              Space Kadet
+              Space Kadet Shop
             </Link>
           </div>
           <div>
@@ -45,9 +44,9 @@ function App() {
             {userInfo ? (
               <div className="dropdown">
                 <Link to="#">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>
+                  {userInfo.name} <i className="fa fa-caret-down"></i>{" "}
                 </Link>
-                <ul className="dropdown-contents">
+                <ul className="dropdown-content">
                   <li>
                     <Link to="/profile">User Profile</Link>
                   </li>
@@ -64,6 +63,27 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin <i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Products</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Orders</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </header>
         <main>
@@ -75,17 +95,20 @@ function App() {
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
+          <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
-          <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <AdminRoute
+            path="/productlist" 
+            component={ProductListScreen}
+          ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">All Rights Reserved</footer>
+        <footer className="row center">All right reserved</footer>
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;
