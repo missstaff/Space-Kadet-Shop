@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute.js";
 import CartScreen from "./screens/CartScreen.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
+import OrderListScreen from "./screens/OrderListScreen.js";
 import OrderScreen from "./screens/OrderScreen.js";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen.js";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen.js";
@@ -109,6 +110,10 @@ function App() {
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}
+          ></AdminRoute>
+          <AdminRoute
+            path="/orderlist"
+            component={OrderListScreen}
           ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
