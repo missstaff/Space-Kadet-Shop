@@ -6,6 +6,7 @@ import {
   orderDetailsReducer,
   orderPayReducer,
   orderMineListReducer,
+  orderListReducer,
 } from "./reducers/orderReducers.js";
 import {
   productCreateReducer,
@@ -53,6 +54,7 @@ const reducer = combineReducers({
   productCreate: productCreateReducer,
   productUpdate: productUpdateReducer,
   productDelete: productDeleteReducer,
+  orderList: orderListReducer,
 });
 
 //connects to redux
