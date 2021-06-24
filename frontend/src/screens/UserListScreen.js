@@ -1,19 +1,37 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { listUsers } from "../actions/userActions.js";
+import { deleteUser, listUsers } from "../actions/userActions.js";
 import LoadingBox from "../components/LoadingBox.js";
 import MessageBox from "../components/MessageBox.js";
 
 export default function UserListScreen() {
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
+
+  const userDelete = useSelector((state) => state.userDelete);
+  const {
+    loading: loadingDelete,
+    error: errorDelete,
+    success: successDelete,
+  } = userDelete;
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listUsers());
-  }, [dispatch]);
+  }, [dispatch, successDelete]);
+  const deleteHandler = (user) => {
+    if (window.confirm("Are you sure you want to delete this user?")) {
+      dispatch(deleteUser(user._id));
+    }
+  };
   return (
     <div>
       <h1>Users</h1>
+      {loadingDelete && <LoadingBox></LoadingBox>}
+      {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
+      {successDelete && (
+        <MessageBox variant="success">Successfully Deleted User</MessageBox>
+      )}
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -39,8 +57,16 @@ export default function UserListScreen() {
                 <td>{user.isSeller ? "Yes" : "No"}</td>
                 <td>{user.isAdmin ? "Yes" : "No"}</td>
                 <td>
-                  <button>Edit</button>
-                  <button>Delete</button>
+                  <button type="button" className="small">
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    className="small"
+                    onClick={() => deleteHandler(user)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
