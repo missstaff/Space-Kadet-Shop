@@ -5,7 +5,8 @@
   "description": "React-Redux ecommerce site running on a MERN stack.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -37,5 +38,9 @@
     "eslint": "^7.27.0",
     "eslint-plugin-react": "^7.24.0",
     "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
   }
 }
