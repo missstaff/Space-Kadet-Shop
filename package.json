@@ -6,9 +6,12 @@
   "main": "index.js",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "build": "cd frontend && npm install && npm run build",
 >>>>>>> parent of a7d9ea7... updated package.json in root to deploy app on heroku
+=======
+>>>>>>> parent of bc31fd5... publish to heroku
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "repository": {
