@@ -5,6 +5,10 @@
   "description": "React-Redux ecommerce site running on a MERN stack.",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
+=======
+    "build": "cd frontend && npm install && npm run build",
+>>>>>>> parent of a7d9ea7... updated package.json in root to deploy app on heroku
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "repository": {
