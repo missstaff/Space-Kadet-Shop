@@ -13,7 +13,7 @@ export default function HomeScreen() {
   /* useEffect will run 1 time after didMount it takes 2 parameters: 1 function and an empty array for the dependencies*/
   useEffect(() => {
     const fetchData = async () => {
-      dispatch(listProducts());
+      dispatch(listProducts({}));
     };
     /* calls fetchData */
     fetchData();
