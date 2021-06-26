@@ -39,13 +39,10 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         ...state,
         paymentMethod: action.payload,
       };
-    case CART_EMPTY:
-      return {
-        ...state,
-        cartItems: [],
-      };
     case CART_ADD_ITEM_FAIL:
       return { ...state, error: action.payload };
+    case CART_EMPTY:
+      return { ...state, error: "", cartItems: [] };
     default:
       return state;
   }
