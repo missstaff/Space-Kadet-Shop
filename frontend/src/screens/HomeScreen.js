@@ -10,15 +10,9 @@ export default function HomeScreen() {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
 
-  /* useEffect will run 1 time after didMount it takes 2 parameters: 1 function and an empty array for the dependencies*/
   useEffect(() => {
-    const fetchData = async () => {
-      dispatch(listProducts());
-    };
-    /* calls fetchData */
-    fetchData();
+    dispatch(listProducts({}));
   }, [dispatch]);
-
   return (
     <div>
       {loading ? (
