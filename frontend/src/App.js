@@ -5,6 +5,7 @@ import { signout } from "./actions/userActions.js";
 import AdminRoute from "./components/AdminRoute.js";
 import PrivateRoute from "./components/PrivateRoute.js";
 import SellerRoute from "./components/SellerRoute.js";
+import SearchBox from "./components/SearchBox.js";
 import CartScreen from "./screens/CartScreen.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
@@ -22,6 +23,7 @@ import ShippingAddressScreen from "./screens/ShippingAddressScreen.js";
 import SigninScreen from "./screens/SigninScreen.js";
 import UserEditScreen from "./screens/UserEditScreen.js";
 import UserListScreen from "./screens/UserListScreen.js";
+import SearchScreen from "./screens/SearchScreen.js";
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -39,6 +41,13 @@ function App() {
             <Link className="brand" to="/">
               Space Kadet Shop
             </Link>
+          </div>
+          <div>
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}
+            ></Route>
           </div>
           <div>
             <Link to="/cart">
@@ -123,6 +132,11 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route
+            path="/search/name/:name?"
+            component={SearchScreen}
+            exact
+          ></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
