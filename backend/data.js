@@ -6,6 +6,14 @@ const data = {
       email: "shawnastaff@gmail.com",
       password: bcrypt.hashSync("1234", 8),
       isAdmin: true,
+      isSeller: true,
+      seller: {
+        name: "Space Kadet Shop",
+        logo: "/images/skglobal.jpg",
+        description: "Best-Seller",
+        rating: 5,
+        numReviews: 87,
+      },
     },
     {
       name: "John",
@@ -18,7 +26,7 @@ const data = {
     {
       name: "Space Kadet Tee Shirt",
       category: "Men's Shirts",
-      image: "../images/mensblacktee.jpg",
+      image: "/images/mensblacktee.jpg",
       price: 25,
       brand: "Space Kadet",
       countInStock: 15,
@@ -29,7 +37,7 @@ const data = {
     {
       name: "Magic Baby Tee",
       category: "Women's Tops",
-      image: "../images/magicbabytee.jpg",
+      image: "/images/magicbabytee.jpg",
       price: 25,
       brand: "Space Kadet",
       countInStock: 16,
@@ -40,7 +48,7 @@ const data = {
     {
       name: "SK Tank Top",
       category: "Women's Tops",
-      image: "../images/sktank.jpg",
+      image: "/images/sktank.jpg",
       price: 25,
       brand: "Space Kadet",
       countInStock: 29,
@@ -51,7 +59,7 @@ const data = {
     {
       name: "Spacey Leggings",
       category: "Leggings",
-      image: "../images/whitespacelyleggings.jpg",
+      image: "/images/whitespacelyleggings.jpg",
       price: 25,
       brand: "Space Kadet",
       countInStock: 0,
@@ -62,7 +70,7 @@ const data = {
     {
       name: "SK Leggings",
       category: "Leggings",
-      image: "../images/whitespacelyleggingssideview.jpg",
+      image: "/images/whitespacelyleggingssideview.jpg",
       price: 25,
       brand: "Space Kadet",
       countInStock: 12,
