@@ -27,6 +27,7 @@ import SearchScreen from "./screens/SearchScreen.js";
 import { listProductCategories } from "./actions/productActions.js";
 import LoadingBox from "./components/LoadingBox.js";
 import MessageBox from "./components/MessageBox.js";
+import MapScreen from "./screens/MapScreen.js";
 function App() {
   const cart = useSelector((state) => state.cart);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -206,6 +207,7 @@ function App() {
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
+          <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}
