@@ -9,6 +9,7 @@ import {
   orderListReducer,
   orderDeleteReducer,
   orderDeliverReducer,
+  orderSummaryReducer,
 } from "./reducers/orderReducers.js";
 import {
   productCategoryListReducer,
@@ -73,6 +74,7 @@ const reducer = combineReducers({
   productCategoryList: productCategoryListReducer,
   productReviewCreate: productReviewCreateReducer,
   userAddressMap: userAddressMapReducer,
+  orderSummary: orderSummaryReducer,
 });
 
 //connects to redux

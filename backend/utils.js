@@ -1,5 +1,8 @@
 import jwt from "jsonwebtoken";
 import mg from "mailgun-js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const generateToken = (user) => {
   return jwt.sign(
@@ -66,6 +69,7 @@ export const mailgun = () =>
   mg({
     apiKey: process.env.MAILGUN_API_KEY,
     domain: process.env.MAILGUN_DOMIAN,
+    host: process.env.MAILGUN_HOST,
   });
 
 export const payOrderEmailTemplate = (order) => {
