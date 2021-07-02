@@ -2,40 +2,45 @@
 
 Space Kadet Shop is an ecommerce site running on a full MERN stack; using a MongoDB cloud cluster for database/administrative needs.<br/>
 
-## To run this application you will need to install: <br/> 1. node.js if it is not already installed on your machine. <br/> 2. And either install MongoDB locally or create a MongoDB Cloud Cluster. <br/>
+## To run this application you will need to install:
 
-## After installing items above: <br/>
+- node.js if it is not already installed on your machine.
+- And either install MongoDB locally or create a MongoDB Cloud Cluster.
 
-### 1. Clone this repository <br/>
+## After installing items above:
 
-### 2. Setup MongoDB <br/>
+### 1. Clone this repository
 
--     a. Local MongoDB download from from https://www.mongodb.com/try/download/community
--       i. set MONGODB_URL=mongodb://localhost/SpaceKadet
--     b. Atlas MongoDB Cluster create database at https://cloud.mongodb.com
--        i. Set MONGODB_URL=mongodb+srv://your-db-connection
+### 2. Setup MongoDB
 
-### 3. Rename the env-example file in the root folder to .env <br/>
+- Local MongoDB download from from https://www.mongodb.com/try/download/community
+- - set MONGODB_URL=mongodb://localhost/SpaceKadet
+- OR
+- Atlas MongoDB Cluster create database at https://cloud.mongodb.com
+- - set MONGODB_URL=mongodb+srv://your-db-connection
 
--     a. add your MongoDB connection string, not already done
--     b. for the JWT_SECRET create a secure string
--     c. set port to 5000
--     d. set SKIP_PREFLIGHT_CHECK to true
+### 3. Rename the env-example file in the root folder to .env
 
-### 4. Start backend <br/>
+- add your MongoDB connection string, not already done
+- for the JWT_SECRET create a secure string
+- set port to 5000
+- set SKIP_PREFLIGHT_CHECK to true
 
--     a. Open a terminal on the root folder
--     b. run the command npm install
--     c.run the command npm start to run the dev server
+### 4. Start backend
 
-### 5. Start the Application <br/>
+- open a terminal on the root folder
+- run the command npm install
+- run the command npm start to run the dev server
 
--     a. Open a new terminal
--     b. cd frontend
--     c. run the command npm install
--     d. use the command npm start the application.
+### 5. Start the Application
+
+- open a new terminal
+- cd frontend
+- run the command npm install
+- use the command npm start the application.
 
 ### 6. Seed Data
 
-- a. Run this on chrome: http://localhost:5000/api/users/seed
-- b. Run this on chrome: http://localhost:5000/api/products/seed
+- Run this on chrome: http://localhost:5000/api/users/seed
+- see data.js for Admin login information
+- Run this on chrome: http://localhost:5000/api/products/seed

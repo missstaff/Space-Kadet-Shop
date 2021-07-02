@@ -28,6 +28,7 @@ import { listProductCategories } from "./actions/productActions.js";
 import LoadingBox from "./components/LoadingBox.js";
 import MessageBox from "./components/MessageBox.js";
 import MapScreen from "./screens/MapScreen.js";
+import DashboardScreen from "./screens/DashboardScreen.js";
 function App() {
   const cart = useSelector((state) => state.cart);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -227,6 +228,10 @@ function App() {
           <AdminRoute
             path="/user/:id/edit"
             component={UserEditScreen}
+          ></AdminRoute>
+          <AdminRoute
+            path="/dashboard"
+            component={DashboardScreen}
           ></AdminRoute>
           <SellerRoute
             path="/productlist/seller"
