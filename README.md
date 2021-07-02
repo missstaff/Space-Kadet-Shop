@@ -14,10 +14,12 @@ Space Kadet Shop is an ecommerce site running on a full MERN stack; using a Mong
 ### 2. Setup MongoDB
 
 - Local MongoDB download from from https://www.mongodb.com/try/download/community
-- - set MONGODB_URL=mongodb://localhost/SpaceKadet
-- OR
+- set MONGODB_URL=mongodb://localhost/SpaceKadet
+
+##### OR
+
 - Atlas MongoDB Cluster create database at https://cloud.mongodb.com
-- - set MONGODB_URL=mongodb+srv://your-db-connection
+- set MONGODB_URL=mongodb+srv://your-db-connection
 
 ### 3. Rename the env-example file in the root folder to .env
 
