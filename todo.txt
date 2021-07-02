@@ -1,0 +1,5 @@
+1. Impliment stripe
+2. Add button to enter tracking number
+3. Figure out why mailgun is not working
+4. Add pagination to users..etc/seller dashoards
+5. Add pagination to home page and or remove item # limitation on  homepage only??
