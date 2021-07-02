@@ -29,6 +29,9 @@ import LoadingBox from "./components/LoadingBox.js";
 import MessageBox from "./components/MessageBox.js";
 import MapScreen from "./screens/MapScreen.js";
 import DashboardScreen from "./screens/DashboardScreen.js";
+import SupportScreen from "./screens/SupportScreen.js";
+import ChatBox from "./components/ChatBox.js";
+
 function App() {
   const cart = useSelector((state) => state.cart);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -61,7 +64,7 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              Space Kadet Shop
+              amazona
             </Link>
           </div>
           <div>
@@ -132,6 +135,9 @@ function App() {
                   </li>
                   <li>
                     <Link to="/userlist">Users</Link>
+                  </li>
+                  <li>
+                    <Link to="/support">Support</Link>
                   </li>
                 </ul>
               </div>
@@ -233,6 +239,8 @@ function App() {
             path="/dashboard"
             component={DashboardScreen}
           ></AdminRoute>
+          <AdminRoute path="/support" component={SupportScreen}></AdminRoute>
+
           <SellerRoute
             path="/productlist/seller"
             component={ProductListScreen}
@@ -241,9 +249,14 @@ function App() {
             path="/orderlist/seller"
             component={OrderListScreen}
           ></SellerRoute>
+
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
+        <footer className="row center">
+          {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+          <div>All right reserved</div>{" "}
+        </footer>
       </div>
     </BrowserRouter>
   );
