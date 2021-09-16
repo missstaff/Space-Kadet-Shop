@@ -1,7 +1,7 @@
 # Space-Kadet-Shop
 
 Space Kadet Shop is an ecommerce site running on a full MERN stack; using a MongoDB cloud cluster for database/administrative needs.<br/>
-
+This was written following the Amazona tutorial by Basher on Udemy. I have a few changes I am implementing such as adding a tracking number to the clients order.
 ## To run this application you will need to install:
 
 - node.js if it is not already installed on your machine.
